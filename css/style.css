@@ -59,10 +59,10 @@ br.clear {
 	clear: both;
 }
 p, ul, ol, dl, table {
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 }
 section, article {
-	margin-bottom: 6em;
+	margin-bottom: 1em;
 }
 section > :last-child, article > :last-child {
 	margin-bottom: 0;
@@ -85,12 +85,15 @@ Egyéni Oszálydefiníciók
 *********************************/
 .centered {
 	text-align: center;
+	margin: 0 auto;
 }
 .leftalign {
 	text-align: left;
+	float: left;
 }
 .rightalign {
 	text-align: right;
+	float: right;
 }
 .rounded20 {
 	border-radius: 20px;
@@ -126,7 +129,7 @@ Egyéni Oszálydefiníciók
 .pushdown:hover {
 	position: relative;
 	top: 3px;
-	color: #fqq;
+	color: #faa;
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
@@ -139,6 +142,17 @@ Egyéni Oszálydefiníciók
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 /*/Drop shadow effect*/
+/*Nyelv választó*/
+/*csak webkites böngészőben működik egyelőre*/
+#langswitcher {
+	background: -webkit-linear-gradient(#006, #F00);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#langswitcher:hover {
+	-webkit-text-fill-color: #00F;
+}
+/*/Nyelv választó*/
 /*********************************
 /Egyéni Oszálydefiníciók
 *********************************/
@@ -148,20 +162,7 @@ Egyéni Oszálydefiníciók
  Egyedi tartalmi elemek definiciói
  *********************************/
  
-/*
- Hacksense Doboz 
- */
-#hacksensecontainer {
-	z-index: 0;
-	position: fixed;
-	top: -45px;
-}
-#hacksense {
-	border-radius: 5px;
-}
-#abouthack {
-	text-align: justify;
-}
+
 /********************************
  /Egyedi tartalmi elemek definiciói
  *********************************/
@@ -332,11 +333,11 @@ ul.special li {
 	transition: top .15s ease-in-out;
 }
 ul.special li:hover {
-	top: -10px;
+	top: -15px;
 }
-ul.special li:hover a {
+/* ul.special li:hover a {
 	background: #b9d2ce;
-}
+} */
 ul.special a {
 	display: block;
 	position: relative;
@@ -363,17 +364,29 @@ ul.special a:before {
 	margin-left: -64px;
 	background: url('images/icons-special.png');
 }
-ul.special a.clipboard:before {
+ul.special a.info:before {
 	background-position: 0px 0px;
 }
-ul.special a.community:before {
+ul.special a.info:hover {
+	background: #b9d2ce;
+}
+ul.special a.rolunk:before {
 	background-position: -128px 0px;
 }
-ul.special a.flask:before {
+ul.special a.rolunk:hover {
+	background: #E3DAA8;
+}
+ul.special a.projects:before {
 	background-position: -256px 0px;
+}
+ul.special a.projects:hover {
+	background: #999999;
 }
 ul.special a.contact:before {
 	background-position: -384px 0px;
+}
+ul.special a.contact:hover {
+	background: #aee1ae;
 }
 ul.meta {
 	font-size: 0.85em;
@@ -420,6 +433,7 @@ ul.meta li.comments:before {
 	text-align: center;
 }
 .is-features {
+	line-height: 1.2em;
 }
 .is-feature {
 }
@@ -438,11 +452,9 @@ ul.meta li.comments:before {
 	background: url('../images/banner.jpg') center center no-repeat;
 	background-size: cover;
 	z-index: 1;
+	height: 325px;
+	padding-top: 5em;
 }
-/*
-			 a pixelizáló
-		*/
-
 #banner-wrapper:before {
 	content: '';
 	position: absolute;
@@ -455,17 +467,15 @@ ul.meta li.comments:before {
 }
 #main-wrapper {
 	background: #fff;
-	border-top: solid 5px #e3daa8;
-	border-bottom: solid 5px #c1cac5;
+	border-top: solid 5px #C1CAC5;
+	border-bottom: solid 5px #C1CAC5;
 }
-/*
- /a pixelizáló
-*/
-
 #banner {
 	position: relative;
 	background: rgba(21, 28, 23, 0.95);
 	text-align: center;
+	height: 225px;
+	margin: 0 auto;
 	z-index: 2;
 }
 #banner:before {
@@ -477,16 +487,6 @@ ul.meta li.comments:before {
 	height: 100%;
 	background: url('images/highlight.png') center center;
 	background-size: 100% 200%;
-}
-#banner:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: url('images/overlay.png');
-	opacity: 0.25;
 }
 #banner > * {
 	position: relative;
@@ -547,3 +547,50 @@ Copyright doboz
 #copyright a {
 	color: inherit;
 }
+/*********************************
+Rolunk szekcio
+*********************************/
+#rolunk-container {
+	padding: 3em 0;
+	background: #E3DAA8;
+	border-top: 10px solid #C1CAC5;
+}
+h2.rolunk {
+	position: relative;
+	border-top: solid 5px #6B7770;
+}
+h2.rolunk span {
+	position: relative;
+	display: inline-block;
+	background: #E3DAA8;
+}
+#rolunk-container span {
+	line-height: 1em;
+}
+#whitespace {
+	height: 1.5em;
+}
+#alapelvek_conainer {
+	padding-top: 1em;
+	width: 300px;
+	border: 1px solid #6b7770;
+}
+a.alapelvek_lista {
+	text-decoration: none;
+}
+a.alapelvek_lista:hover {
+	text-transform: uppercase;
+	color: #FFF;
+	border-radius: 4px;
+	padding: 10px;
+}
+#alapelvek {
+	text-transform: capitalize;
+	font-weight: bold;
+	width: 300px;
+}
+
+#fenntarthatosag, #onkentesseg, #meritokracia, #belepes, #transzparencia, #nyitottsag {
+	display: none;
+}
+ 

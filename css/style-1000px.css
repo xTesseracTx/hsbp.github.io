@@ -1,5 +1,5 @@
 /*
-	TXT 2.0 by HTML5 UP
+	TXT 2.5 by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -58,21 +58,20 @@
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
-
-	#banner
-	{
-		padding: 4em 0 3.5em 0;
-	}
-
-		#banner h2
-		{
-			margin: 0 0 0.5em 0;
-		}
-		
-		#banner .byline
-		{
-			margin: 0 0 1.5em 0;
-		}
+#banner {
+	padding: 7em 0 5em 0;
+	width: 500px;
+	height:200px;
+	border-radius: 5px;
+}
+#banner h2 {
+	font-size: 2.75em;
+	margin: -2em 0 0.4em 0;
+}
+#banner .byline {
+	font-size: 1.35em;
+	margin: 0 0 0.05em 0;
+}
 
 /*********************************************************************************/
 /* Main                                                                          */
@@ -111,3 +110,24 @@
 	{
 		margin: 0;
 	}
+	
+	/*
+ Hacksense Doboz 
+ */
+.hacksense {
+	padding-top: 1em;
+	margin: 0 auto;
+	height: 50px;
+	width: 206px;
+	background: url(../images/hacksense_open.png);
+}
+.hacksense:hover {
+	padding-top: 1em;
+	margin: 0 auto;
+	height: 50px;
+	width: 206px;
+	background: url(../images/hacksense_closed.png);
+}
+.hacksense-mobile {
+	display: none;
+}
